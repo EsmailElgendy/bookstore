@@ -32,7 +32,5 @@ public class EBook extends Book implements Downloadable {
     @Override
     public void download() {
         System.out.println("Downloading EBook "+ this.getTitle());
-
-
     }
 }

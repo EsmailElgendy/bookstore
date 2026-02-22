@@ -5,10 +5,14 @@ public abstract class Payment {
     private int paymentNumber;
     private int transactionID;
     private double amount;
+    public Payment(int paymentNumber, int transactionID, double amount) {
+        this.paymentNumber = paymentNumber;
+        this.transactionID = transactionID;
+        this.amount = amount;
+    }
 
     public int getPaymentNumber() {
         return paymentNumber;
-
     }
 
     public void setPaymentNumber(int paymentNumber) {
@@ -23,14 +27,11 @@ public abstract class Payment {
         this.transactionID = transactionID;
     }
 
-    public double getTotalPrice() {
+    public double getAmount() {
         return amount;
     }
-    public void setTotalPrice(double totalPrice) {
-        this.amount = totalPrice;
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
-    public Payment(int paymentNumber, int transactionID, double totalPrice) {
-        this.setTotalPrice(totalPrice);
-    }
-    abstract public boolean pay();
 }
