@@ -7,6 +7,7 @@ public class VisaPayment extends Payment implements PaymentMethod {
     public VisaPayment(int paymentNumber, int transactionID, double amount,int pin, int inputPin) {
         super(paymentNumber, transactionID, amount);
         this.pin = pin;
+        this.inputPin = inputPin;
     }
 
     public int getInputPin() {
@@ -24,7 +25,7 @@ public class VisaPayment extends Payment implements PaymentMethod {
     @Override
     public void pay(double amount) {
         if (this.securityCheck()) {
-            System.out.println("Payment successful");
+            System.out.println("You have successfully paid " + amount + ".");
         }
         else {
             System.out.println("Payment failed");

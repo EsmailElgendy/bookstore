@@ -34,7 +34,7 @@ public class WalletPayment extends Payment implements PaymentMethod {
     @Override
     public void pay(double amount) {
         if (securityCheck()) {
-            System.out.println("Payment Successful");
+            System.out.println("You have successfully paid \" + amount + \".");
         }
         else {
             System.out.println("Payment Failed");
